@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class CamFollow : MonoBehaviour
 {
-    public GameObject Target;
+    public Transform target;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Target.transform.position;
+        transform.position = target.position;
     }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour
@@ -15,7 +15,7 @@ public class Arrow : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var closetPos = other.ClosestPoint(transform.position);
-
+        
         transform.position = closetPos;
         transform.SetParent(other.transform);
         isMove = false;

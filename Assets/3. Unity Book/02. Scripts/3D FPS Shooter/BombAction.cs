@@ -3,12 +3,12 @@ using UnityEngine;
 public class BombAction : MonoBehaviour
 {
     public GameObject bombEffect;
-
-    private void OnCollisionEnter(Collision collision) // ¼ö·ùÅºÀÌ ¹«¾ùÀÎ°¡ Ãæµ¹ÇÒ °æ¿ì
+    
+    private void OnCollisionEnter(Collision collision) // ìˆ˜ë¥˜íƒ„ì´ ë¬´ì—‡ì¸ê°€ ì¶©ëŒí•  ê²½ìš°
     {
-        GameObject eff = Instantiate(bombEffect); // ÆÄÆ¼Å¬ »ı¼º
-        eff.transform.position = transform.position; // ÆÄÆ¼Å¬ À§Ä¡ ÃÊ±âÈ­
-
+        GameObject eff = Instantiate(bombEffect); // íŒŒí‹°í´ ìƒì„±
+        eff.transform.position = transform.position; // íŒŒí‹°í´ ìœ„ì¹˜ ì´ˆê¸°í™”
+        
         Destroy(gameObject);
     }
 }
