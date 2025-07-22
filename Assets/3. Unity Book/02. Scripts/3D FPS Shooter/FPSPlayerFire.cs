@@ -6,6 +6,7 @@ public class FPSPlayerFire : MonoBehaviour
     public GameObject firePosition;
 
     public GameObject bombFactory;
+    private Animator anim;
 
     public float throwPower = 15f;
     public int weaponPower = 5;
@@ -16,15 +17,21 @@ public class FPSPlayerFire : MonoBehaviour
     void Start()
     {
         ps = bulletEffect.GetComponent<ParticleSystem>();
+        anim = transform.GetComponentInChildren<Animator>();
+
     }
 
     void Update()
     {
+
+        
         if (FPSGameManager.Instance.gState != FPSGameManager.GameState.Run)
             return;
         
         if (Input.GetMouseButtonDown(0)) // 마우스 왼쪽 버튼 클릭
         {
+            
+            
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
             RaycastHit hitInfo =  new RaycastHit();
 
